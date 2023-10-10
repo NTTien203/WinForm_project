@@ -1,5 +1,5 @@
-CREATE DATABASE [StudentDB2]
-USE [StudentDB2]
+CREATE DATABASE [StudentDB]
+USE [StudentDB]
 
 -- hedt
 CREATE TABLE [dbo].[HeDT](
