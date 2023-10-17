@@ -101,3 +101,94 @@ C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form3.resources
 C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form4.resources
 C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form5.resources
 C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form6.resources
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.exe
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.pdb
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\Test.exe.config
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\Test.exe
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\Test.pdb
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.CodeParser.v23.1.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraDiagram.v23.1.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Diagram.v23.1.Core.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Pdf.v23.1.Core.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Pdf.v23.1.Drawing.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.DataVisualization.v23.1.Core.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Images.v23.1.dll
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Charts.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Dashboard.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Dashboard.v23.1.Win.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Data.Desktop.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Data.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.DataAccess.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.DataAccess.v23.1.UI.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Drawing.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Map.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Office.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.PivotGrid.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Printing.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.RichEdit.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Sparkline.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.TreeMap.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Utils.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Utils.v23.1.UI.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Xpo.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraBars.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraCharts.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraCharts.v23.1.UI.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraEditors.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraGauges.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraGauges.v23.1.Presets.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraGauges.v23.1.Win.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraGrid.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraLayout.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraMap.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraPivotGrid.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraPrinting.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraReports.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraTreeMap.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraTreeMap.v23.1.UI.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraDiagram.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Diagram.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Pdf.v23.1.Core.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.Pdf.v23.1.Drawing.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.Form2.resources
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.Form3.resources
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.Form4.resources
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.Form5.resources
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.Form6.resources
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.Properties.Resources.resources
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.csproj.GenerateResource.cache
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.exe.licenses
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+G:\My Drive\Hutech\LTW(csharp)\Projects\Final\WinForm_project\Test\Test\obj\Debug\Test.csproj.CopyComplete
+D:\WinForm_project\Test\Test\bin\Debug\DevExpress.Data.Desktop.v23.1.dll
+D:\WinForm_project\Test\Test\bin\Debug\DevExpress.Data.v23.1.dll
+D:\WinForm_project\Test\Test\bin\Debug\DevExpress.Utils.v23.1.dll
+D:\WinForm_project\Test\Test\bin\Debug\DevExpress.XtraEditors.v23.1.dll
+D:\WinForm_project\Test\Test\bin\Debug\EntityFramework.dll
+D:\WinForm_project\Test\Test\bin\Debug\EntityFramework.SqlServer.dll
+D:\WinForm_project\Test\Test\bin\Debug\EntityFramework.xml
+D:\WinForm_project\Test\Test\bin\Debug\EntityFramework.SqlServer.xml
+D:\WinForm_project\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+D:\WinForm_project\Test\Test\obj\Debug\Test.Form2.resources
+D:\WinForm_project\Test\Test\obj\Debug\Test.Form3.resources
+D:\WinForm_project\Test\Test\obj\Debug\Test.Form4.resources
+D:\WinForm_project\Test\Test\obj\Debug\Test.Form5.resources
+D:\WinForm_project\Test\Test\obj\Debug\Test.Form6.resources
+D:\WinForm_project\Test\Test\obj\Debug\Test.Properties.Resources.resources
+D:\WinForm_project\Test\Test\obj\Debug\Test.csproj.GenerateResource.cache
+D:\WinForm_project\Test\Test\obj\Debug\Test.exe.licenses
+D:\WinForm_project\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\WinForm_project\Test\Test\obj\Debug\Test.exe
+D:\WinForm_project\Test\Test\obj\Debug\Test.pdb
+D:\WinForm_project\Test\Test\bin\Debug\Test.exe.config
+D:\WinForm_project\Test\Test\bin\Debug\Test.exe
+D:\WinForm_project\Test\Test\bin\Debug\Test.pdb
+D:\WinForm_project\Test\Test\obj\Debug\Test.csproj.CopyComplete
