@@ -101,3 +101,7 @@ C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form3.resources
 C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form4.resources
 C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form5.resources
 C:\Users\Admin\source\repos\Test\Test\obj\Debug\Test.Form6.resources
+C:\Users\Admin\source\repos\Test\Test\bin\Debug\EntityFramework.dll
+C:\Users\Admin\source\repos\Test\Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\source\repos\Test\Test\bin\Debug\EntityFramework.xml
+C:\Users\Admin\source\repos\Test\Test\bin\Debug\EntityFramework.SqlServer.xml
