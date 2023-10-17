@@ -147,7 +147,7 @@ INSERT INTO MonHoc (MaMH, TenMH, SoTC) VALUES
 -- Chèn dữ liệu vào bảng SinhVien
 INSERT INTO SinhVien (MaSV, TenSV, GioiTinh, NgaySinh, QueQuan, MaLop) VALUES
 ('SV001', N'Nguyễn Văn A', 'Nam', '2000-01-01', N'Hà Nội', 'L001'),
-('SV002', N'Trần Thị B', 'Nữ', '2001-02-02', N'Hồ Chí Minh', 'L002'),
+('SV002', N'Trần Thị B', N'Nữ', '2001-02-02', N'Hồ Chí Minh', 'L002'),
 ('SV003', N'Lê Văn C', 'Nam', '2002-03-03', N'Đà Nẵng', 'L001');
 -- Chèn dữ liệu vào bảng Diem
 INSERT INTO Diem (MaSV, MaMH, DiemL1, DiemL2) VALUES
