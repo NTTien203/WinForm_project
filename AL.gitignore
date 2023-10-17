@@ -1,6 +1,7 @@
-.vs/
-bin/
-obj/
+Test/.vs/
+Test/Test/.vs/
+Test/Test/bin/
+Test/Test/obj/
 *.cache
 *.vsidx
 *.suo
