@@ -54,6 +54,8 @@ namespace Test
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.label11 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangDiem)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -62,6 +64,8 @@ namespace Test
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.dgvBangDiem);
             this.groupBox3.Location = new System.Drawing.Point(31, 451);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -85,14 +89,14 @@ namespace Test
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvBangDiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBangDiem.Location = new System.Drawing.Point(3, 23);
+            this.dgvBangDiem.Location = new System.Drawing.Point(3, 95);
             this.dgvBangDiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvBangDiem.Name = "dgvBangDiem";
             this.dgvBangDiem.RowHeadersWidth = 51;
             this.dgvBangDiem.RowTemplate.Height = 24;
-            this.dgvBangDiem.Size = new System.Drawing.Size(1172, 406);
+            this.dgvBangDiem.Size = new System.Drawing.Size(1172, 334);
             this.dgvBangDiem.TabIndex = 0;
+            this.dgvBangDiem.SelectionChanged += new System.EventHandler(this.dgvBangDiem_SelectionChanged);
             // 
             // Column1
             // 
@@ -247,6 +251,7 @@ namespace Test
             this.simpleButton5.Size = new System.Drawing.Size(105, 54);
             this.simpleButton5.TabIndex = 16;
             this.simpleButton5.Text = "Thoát";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // simpleButton6
             // 
@@ -257,6 +262,7 @@ namespace Test
             this.simpleButton6.Size = new System.Drawing.Size(115, 54);
             this.simpleButton6.TabIndex = 15;
             this.simpleButton6.Text = "Sửa";
+            this.simpleButton6.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // simpleButton7
             // 
@@ -267,6 +273,7 @@ namespace Test
             this.simpleButton7.Size = new System.Drawing.Size(110, 54);
             this.simpleButton7.TabIndex = 14;
             this.simpleButton7.Text = "Xóa";
+            this.simpleButton7.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // simpleButton8
             // 
@@ -277,6 +284,7 @@ namespace Test
             this.simpleButton8.Size = new System.Drawing.Size(105, 54);
             this.simpleButton8.TabIndex = 13;
             this.simpleButton8.Text = "Thêm";
+            this.simpleButton8.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label11
             // 
@@ -288,10 +296,28 @@ namespace Test
             this.label11.TabIndex = 9;
             this.label11.Text = "Bảng Điểm";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(251, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Lọc theo MSSV/Họ Tên/ Tên Môn:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(271, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(317, 26);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1238, 917);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.label11);
@@ -303,6 +329,7 @@ namespace Test
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangDiem)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -338,5 +365,7 @@ namespace Test
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

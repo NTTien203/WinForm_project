@@ -169,7 +169,28 @@ namespace Test
         {
             try
             {
+                if (check())
+                {
+                    DBQuanLySV context = new DBQuanLySV();
 
+                    // Lay ra MonHoc theo txtBangDiemTenMonHoc
+                    MonHoc m = context.MonHocs.FirstOrDefault(a => a.TenMH == txtBangDiemTenMonHoc.Text);
+                    // Tim Diem co MaSV va MaMH theo txtBangDiemMSSV va m.MaMH
+                    Diem dDelete = context.Diems.FirstOrDefault(p => p.MaSV == txtBangDiemMSSV.Text && p.MaMH == m.MaMH);
+
+                    if (dDelete != null)
+                    {
+                        context.Diems.Remove(dDelete);
+                        context.SaveChanges();
+
+                        List<Diem> listDiem = context.Diems.ToList();
+                        BindGrid(listDiem);
+
+                        MessageBox.Show("Xoa khoa thanh cong!", "Thong bao!");
+                    }
+                    else
+                        MessageBox.Show("Khong tim thay!", "Thong bao!");
+                }
             }
             catch (Exception ex)
             {
@@ -189,6 +210,39 @@ namespace Test
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dgvBangDiem_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvBangDiem.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvBangDiem.SelectedRows[0];
+                txtBangDiemMSSV.Text = selectedRow.Cells[0].Value.ToString();
+                txtBangDiemTenMonHoc.Text = selectedRow.Cells[2].Value.ToString();
+                txtBangDiemDiemLan1.Text = selectedRow.Cells[3].Value.ToString();
+                txtBangDiemDiemLan2.Text = selectedRow.Cells[4].Value.ToString();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DBQuanLySV context = new DBQuanLySV();
+
+            string searchText = textBox1.Text;
+
+            var query = from diem in context.Diems
+                        join sinhvien in context.SinhViens on diem.MaSV equals sinhvien.MaSV
+                        join monhoc in context.MonHocs on diem.MaMH equals monhoc.MaMH
+                        where sinhvien.TenSV.Contains(searchText) || diem.MaSV.Contains(searchText) || monhoc.TenMH.Contains(searchText)
+                        select diem;
+
+            List<Diem> d = query.ToList();
+            BindGrid(d);
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
