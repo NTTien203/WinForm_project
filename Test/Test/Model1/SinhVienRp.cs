@@ -12,8 +12,9 @@ namespace Test.Model1
         public string TenSV { get; set; }
         public DateTime NgaySinh { get; set; }
         public string GioiTinh { get; set; }
-        public virtual Lop Lop { get; set; }
+        public string MaLop { get; set; }
         public string QueQuan { get; set; }
-        
+
+
     }
 }

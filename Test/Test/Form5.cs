@@ -200,6 +200,7 @@ namespace Test
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             try
             {
                 DBQuanLySV context = new DBQuanLySV();

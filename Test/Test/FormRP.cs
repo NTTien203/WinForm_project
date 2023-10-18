@@ -21,7 +21,8 @@ namespace Test
 
         private void FormRP_Load(object sender, EventArgs e)
         {
-             DBQuanLySV  context = new DBQuanLySV();
+            this.WindowState = FormWindowState.Maximized;
+            DBQuanLySV  context = new DBQuanLySV();
             List<SinhVien> listSinhVien = context.SinhViens.ToList();
             List<SinhVienRp> listSinhVienRP = new List<SinhVienRp>();
             foreach(SinhVien sv in listSinhVien)
@@ -31,8 +32,9 @@ namespace Test
                 temp.TenSV = sv.TenSV;
                 temp.GioiTinh = sv.GioiTinh;
                 temp.NgaySinh = sv.NgaySinh;
-                temp.Lop = sv.Lop;
+                temp.MaLop = sv.MaLop;
                 temp.QueQuan = sv.QueQuan;
+                
                 listSinhVienRP.Add(temp);
             }
             reportViewer1.LocalReport.ReportPath = "RPSinhVien.rdlc";
