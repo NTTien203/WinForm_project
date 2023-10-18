@@ -250,7 +250,6 @@ namespace Test
             this.groupBox6.Size = new System.Drawing.Size(740, 82);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // simpleButton5
             // 
