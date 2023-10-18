@@ -443,3 +443,5 @@ E:\Đồ Án WF\New\WinForm_project\Test\Test\obj\Debug\Test.csproj.CoreCompileI
 E:\Đồ Án WF\New\WinForm_project\Test\Test\obj\Debug\Test.csproj.CopyComplete
 E:\Đồ Án WF\New\WinForm_project\Test\Test\obj\Debug\Test.exe
 E:\Đồ Án WF\New\WinForm_project\Test\Test\obj\Debug\Test.pdb
+E:\Đồ Án WF\New\WinForm_project\Test\Test\obj\Debug\Test.frmKhoa.resources
+E:\Đồ Án WF\New\WinForm_project\Test\Test\obj\Debug\Test.frmLop.resources

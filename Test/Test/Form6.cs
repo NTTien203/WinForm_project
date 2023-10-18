@@ -111,5 +111,10 @@ namespace Test
                 textBox3.Text = dataGridView1.Rows[rowIndex].Cells[2]?.Value?.ToString();
             }
         }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

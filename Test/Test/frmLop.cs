@@ -90,7 +90,7 @@ namespace Test
 
         private void frmLop_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void dgvDanhSach_CellClick(object sender, DataGridViewCellEventArgs e)

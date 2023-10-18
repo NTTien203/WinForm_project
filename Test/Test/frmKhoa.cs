@@ -74,7 +74,7 @@ namespace Test
         {
             this.Close();
         }
-
+        //Button them
         private void spbtnThem_Click(object sender, EventArgs e)
         {
             try
@@ -115,7 +115,7 @@ namespace Test
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        //Button Xoa
         private void spbtnXoa_Click(object sender, EventArgs e)
         {
             try
@@ -178,7 +178,7 @@ namespace Test
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        //Button Sua
         private void spbtnSua_Click(object sender, EventArgs e)
         {
             try
@@ -236,7 +236,7 @@ namespace Test
 
         private void frmKhoa_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void txtDT_KeyPress(object sender, KeyPressEventArgs e)

@@ -145,6 +145,18 @@
     <Compile Include="FormRP.Designer.cs">
       <DependentUpon>FormRP.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhoa.Designer.cs">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1\DBQuanLySV.cs" />
     <Compile Include="Model1\Diem.cs" />
     <Compile Include="Model1\HeDT.cs" />
@@ -174,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRP.resx">
       <DependentUpon>FormRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhoa.resx">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLop.resx">
+      <DependentUpon>frmLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
