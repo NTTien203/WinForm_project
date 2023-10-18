@@ -19,11 +19,11 @@ namespace Test.Model1
         [StringLength(10)]
         public string MaMH { get; set; }
 
-        [Key]
+        //[Key]
         [Column(Order = 2)]
         public double DiemL1 { get; set; }
 
-        [Key]
+        //[Key]
         [Column(Order = 3)]
         public double DiemL2 { get; set; }
 

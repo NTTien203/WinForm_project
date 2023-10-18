@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraRichEdit.Layout.Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,13 +19,6 @@ namespace Test
         {
             InitializeComponent();
         }
-
-
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
 
         private bool check()
         {
@@ -89,6 +83,8 @@ namespace Test
                     dgvBangDiem.Rows[index].Cells[3].Value = item.DiemL1;
                     dgvBangDiem.Rows[index].Cells[4].Value = item.DiemL2;
                     dgvBangDiem.Rows[index].Cells[5].Value = (item.DiemL1 + item.DiemL2) / 2;
+                    dgvBangDiem.Rows[index].Cells[6].Value = transNumbertoAlpha((float)(item.DiemL1 + item.DiemL2) / 2);
+
                 }
 
             }
@@ -105,27 +101,30 @@ namespace Test
             {
                 if (check())
                 {
-                    DBQuanLySV context = new DBQuanLySV();
-
-                    MonHoc m = context.MonHocs.FirstOrDefault(a => a.TenMH == txtBangDiemTenMonHoc.Text);
-
-                    Diem d = new Diem()
+                    if (checkExist() == false)
                     {
-                        MaSV = txtBangDiemMSSV.Text,
-                        MaMH = m.MaMH,
-                        DiemL1 = float.Parse(txtBangDiemDiemLan1.Text),
-                        DiemL2 = float.Parse(txtBangDiemDiemLan2.Text)
-                    };
+                        DBQuanLySV context = new DBQuanLySV();
 
-                    context.Diems.Add(d);
+                        MonHoc m = context.MonHocs.FirstOrDefault(a => a.TenMH == txtBangDiemTenMonHoc.Text);
 
-                    context.SaveChanges();
+                        Diem d = new Diem()
+                        {
+                            MaSV = txtBangDiemMSSV.Text,
+                            MaMH = m.MaMH,
+                            DiemL1 = float.Parse(txtBangDiemDiemLan1.Text),
+                            DiemL2 = float.Parse(txtBangDiemDiemLan2.Text)
+                        };
 
-                    List<Diem> listDiem = context.Diems.ToList();
+                        context.Diems.Add(d);
 
-                    BindGrid(listDiem);
+                        context.SaveChanges();
 
-                    MessageBox.Show("Them thanh cong!", "Thong bao!");
+                        List<Diem> listDiem = context.Diems.ToList();
+
+                        BindGrid(listDiem);
+
+                        MessageBox.Show("Them thanh cong!", "Thong bao!");
+                    }
                 }
             }
             catch (Exception ex)
@@ -144,15 +143,17 @@ namespace Test
 
                     MonHoc m = context.MonHocs.FirstOrDefault(a => a.TenMH == txtBangDiemTenMonHoc.Text);
 
-                    Diem dUpdate = context.Diems.FirstOrDefault(p => p.MaSV == txtBangDiemMSSV.Text && p.MaMH == m.MaMH);
+                    Diem diem = context.Diems.FirstOrDefault(p => p.MaSV == txtBangDiemMSSV.Text && p.MaMH == m.MaMH);
 
-                    if (dUpdate != null)
+                    if (diem != null)
                     {
-                        dUpdate.DiemL1 = float.Parse(txtBangDiemDiemLan1.Text);
-                        dUpdate.DiemL1 = float.Parse(txtBangDiemDiemLan1.Text);
+                        diem.DiemL1 = double.Parse(txtBangDiemDiemLan1.Text);
+                        diem.DiemL2 = double.Parse(txtBangDiemDiemLan2.Text);
                         context.SaveChanges();
+                        
                         List<Diem> listDiem = context.Diems.ToList();
                         BindGrid(listDiem);
+
                         MessageBox.Show("Cap nhat du lieu thanh cong!", "Thong bao!");
                     }
                     else
@@ -241,9 +242,70 @@ namespace Test
             BindGrid(d);
         }
 
+        private bool checkExist()
+        {
+            DBQuanLySV context = new DBQuanLySV();
+            MonHoc m = context.MonHocs.FirstOrDefault(a => a.TenMH == txtBangDiemTenMonHoc.Text);
+            Diem d = context.Diems.FirstOrDefault(a => a.MaSV == txtBangDiemMSSV.Text && a.MaMH == m.MaMH);
+            if (d != null)
+            {
+                MessageBox.Show("Sinh viên đã có điểm môn này rồi!");
+                return true;
+            }
+
+            return false;
+        }
+
+
         private void simpleButton5_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private string transNumbertoAlpha(float num)
+        {
+            string result;
+
+            if (num >= 8.5)
+            {
+                result = "A";
+            }
+            else if (num >= 7.8)
+            {
+                result = "B+";
+            }
+            else if (num >= 7.0)
+            {
+                result = "B";
+            }
+            else if (num >= 6.3)
+            {
+                result = "C+";
+            }
+            else if (num >= 5.5)
+            {
+                result = "C";
+            }
+            else if (num >= 4.8)
+            {
+                result = "D+";
+            }
+            else if (num >= 4.0)
+            {
+                result = "D";
+            }
+            else if (num >= 3.0)
+            {
+                result = "F+";
+            }
+            else
+            {
+                result = "F";
+            }
+
+            return result;
+        }
+
+
     }
 }
