@@ -1,0 +1,9 @@
+Test/.vs/
+Test/Test/.vs/
+Test/Test/.vs/FileContentIndex/
+Test/Test/bin/
+Test/Test/obj/
+*.cache
+*.vsidx
+*.suo
+*.pdb
