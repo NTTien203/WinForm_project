@@ -139,6 +139,12 @@
     <Compile Include="Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDoiPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoiPass.Designer.cs">
+      <DependentUpon>FormDoiPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,7 @@
     <Compile Include="frmLop.Designer.cs">
       <DependentUpon>frmLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model1\DangNhap.cs" />
     <Compile Include="Model1\DBQuanLySV.cs" />
     <Compile Include="Model1\Diem.cs" />
     <Compile Include="Model1\HeDT.cs" />
@@ -184,6 +191,9 @@
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDoiPass.resx">
+      <DependentUpon>FormDoiPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRP.resx">
       <DependentUpon>FormRP.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +219,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Test.Model1.DBQuanLySV.datasource" />
+    <None Include="Properties\DataSources\Test.Model1.DiemRp.datasource" />
     <None Include="Properties\DataSources\Test.Model1.SinhVien.datasource" />
     <None Include="Properties\DataSources\Test.Model1.SinhVienRp.datasource" />
     <None Include="Properties\Settings.settings">

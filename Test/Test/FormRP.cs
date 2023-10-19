@@ -22,10 +22,30 @@ namespace Test
         private void FormRP_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            DBQuanLySV  context = new DBQuanLySV();
+            /* DBQuanLySV  context = new DBQuanLySV();
+             List<SinhVien> listSinhVien = context.SinhViens.ToList();
+             List<SinhVienRp> listSinhVienRP = new List<SinhVienRp>();
+             foreach(SinhVien sv in listSinhVien)
+             {
+                 SinhVienRp temp = new SinhVienRp();
+                 temp.MaSV = sv.MaSV;
+                 temp.TenSV = sv.TenSV;
+                 temp.GioiTinh = sv.GioiTinh;
+                 temp.NgaySinh = sv.NgaySinh;
+                 temp.MaLop = sv.MaLop;
+                 temp.QueQuan = sv.QueQuan;
+
+                 listSinhVienRP.Add(temp);
+             }
+             reportViewer1.LocalReport.ReportPath = "RPSinhVien.rdlc";
+             var source = new ReportDataSource("DataSet1", listSinhVienRP);
+             reportViewer1.LocalReport.DataSources.Clear();
+             reportViewer1.LocalReport.DataSources.Add(source);
+             this.reportViewer1.RefreshReport();*/
+            DBQuanLySV context = new DBQuanLySV();
             List<SinhVien> listSinhVien = context.SinhViens.ToList();
             List<SinhVienRp> listSinhVienRP = new List<SinhVienRp>();
-            foreach(SinhVien sv in listSinhVien)
+            foreach (SinhVien sv in listSinhVien)
             {
                 SinhVienRp temp = new SinhVienRp();
                 temp.MaSV = sv.MaSV;
@@ -34,7 +54,7 @@ namespace Test
                 temp.NgaySinh = sv.NgaySinh;
                 temp.MaLop = sv.MaLop;
                 temp.QueQuan = sv.QueQuan;
-                
+
                 listSinhVienRP.Add(temp);
             }
             reportViewer1.LocalReport.ReportPath = "RPSinhVien.rdlc";
@@ -42,7 +62,6 @@ namespace Test
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(source);
             this.reportViewer1.RefreshReport();
-           
         }
     }
 }

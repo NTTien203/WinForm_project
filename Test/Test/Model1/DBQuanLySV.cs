@@ -19,6 +19,7 @@ namespace Test.Model1
         public virtual DbSet<MonHoc> MonHocs { get; set; }
         public virtual DbSet<SinhVien> SinhViens { get; set; }
         public virtual DbSet<Diem> Diems { get; set; }
+        public virtual DbSet<DangNhap> DangNhaps { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

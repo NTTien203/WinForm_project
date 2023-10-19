@@ -55,7 +55,7 @@ namespace Test
             // 
             // ribbon
             // 
-            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(89);
+            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(174);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -72,10 +72,10 @@ namespace Test
             this.barButtonItem11,
             this.barButtonItem12});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.ribbon.MaxItemId = 13;
+            this.ribbon.Margin = new System.Windows.Forms.Padding(19, 19, 19, 19);
+            this.ribbon.MaxItemId = 14;
             this.ribbon.Name = "ribbon";
-            this.ribbon.OptionsMenuMinWidth = 1006;
+            this.ribbon.OptionsMenuMinWidth = 1964;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbon.Size = new System.Drawing.Size(1293, 193);
@@ -106,12 +106,14 @@ namespace Test
             this.barButtonItem3.Caption = "Đổi mật khẩu";
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "Đăng xuất";
             this.barButtonItem4.Id = 4;
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -213,7 +215,7 @@ namespace Test
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 542);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(19, 19, 19, 19);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1293, 30);

@@ -14,7 +14,7 @@ namespace Test.Model1
         public string GioiTinh { get; set; }
         public string MaLop { get; set; }
         public string QueQuan { get; set; }
-
+        
 
     }
 }

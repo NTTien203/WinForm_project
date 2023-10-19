@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Test.Model1;
 
 namespace Test
 {
     public partial class Form3 : Form
     {
-    
+        static DBQuanLySV context = new DBQuanLySV();
+        
         public Form3()
         {
             InitializeComponent();
@@ -29,7 +31,8 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text=="Tien" && textBox2.Text == "Tien")
+            DangNhap dn = context.DangNhaps.FirstOrDefault(s => s.TaiKhoang == textBox1.Text && s.MatKhau == textBox2.Text);
+            if(dn!=null)
             {
                 MessageBox.Show("dang nhap thanh cong");
                 Form2 fr = new Form2();

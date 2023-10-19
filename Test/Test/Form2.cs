@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Test.Model1;
 
 namespace Test
 {
     public partial class Form2 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
 
-       
+     
         //tat tab khi mo 1 tab khac
         public void DisposeAllButThis(Form form)
         {
@@ -149,6 +150,21 @@ namespace Test
             barButtonItem11.Enabled = true;
             barButtonItem12.Enabled = true;
             DisposeAllButThis(new_mdi_child);
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDoiPass fr = new FormDoiPass();
+            this.Hide();
+            fr.ShowDialog();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            MessageBox.Show("Dang Xuat Thanh Cong");
+            Form3 fr = new Form3();
+            this.Hide();
+            fr.ShowDialog();
         }
     }
 }
