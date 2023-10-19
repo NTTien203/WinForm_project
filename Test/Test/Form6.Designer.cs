@@ -43,7 +43,6 @@ namespace Test
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -169,7 +168,6 @@ namespace Test
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.simpleButton4);
             this.groupBox1.Controls.Add(this.simpleButton3);
             this.groupBox1.Controls.Add(this.simpleButton2);
             this.groupBox1.Controls.Add(this.simpleButton1);
@@ -179,19 +177,10 @@ namespace Test
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // simpleButton4
-            // 
-            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(253, 97);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(102, 43);
-            this.simpleButton4.TabIndex = 16;
-            this.simpleButton4.Text = "Thoát";
-            // 
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.Location = new System.Drawing.Point(54, 94);
+            this.simpleButton3.Location = new System.Drawing.Point(177, 64);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(102, 43);
             this.simpleButton3.TabIndex = 15;
@@ -201,7 +190,7 @@ namespace Test
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(253, 21);
+            this.simpleButton2.Location = new System.Drawing.Point(318, 64);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(102, 43);
             this.simpleButton2.TabIndex = 14;
@@ -211,7 +200,7 @@ namespace Test
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(54, 21);
+            this.simpleButton1.Location = new System.Drawing.Point(6, 64);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(102, 43);
             this.simpleButton1.TabIndex = 13;
@@ -264,7 +253,6 @@ namespace Test
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;

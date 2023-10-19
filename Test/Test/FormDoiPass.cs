@@ -66,5 +66,12 @@ namespace Test
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 fr = new Form2();
+            fr.ShowDialog();
+        }
     }
 }

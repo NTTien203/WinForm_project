@@ -39,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.spbtnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnSua = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnThem = new DevExpress.XtraEditors.SimpleButton();
@@ -58,6 +57,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtDT);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtTenKhoa);
@@ -151,6 +151,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(483, 9);
@@ -160,24 +161,12 @@
             this.label1.Text = "Khoa";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // spbtnThoat
-            // 
-            this.spbtnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spbtnThoat.Appearance.Options.UseFont = true;
-            this.spbtnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("spbtnThoat.ImageOptions.SvgImage")));
-            this.spbtnThoat.Location = new System.Drawing.Point(286, 127);
-            this.spbtnThoat.Name = "spbtnThoat";
-            this.spbtnThoat.Size = new System.Drawing.Size(124, 53);
-            this.spbtnThoat.TabIndex = 16;
-            this.spbtnThoat.Text = "Thoát";
-            this.spbtnThoat.Click += new System.EventHandler(this.spbtnThoat_Click);
-            // 
             // spbtnSua
             // 
             this.spbtnSua.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spbtnSua.Appearance.Options.UseFont = true;
             this.spbtnSua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("spbtnSua.ImageOptions.SvgImage")));
-            this.spbtnSua.Location = new System.Drawing.Point(31, 127);
+            this.spbtnSua.Location = new System.Drawing.Point(183, 85);
             this.spbtnSua.Name = "spbtnSua";
             this.spbtnSua.Size = new System.Drawing.Size(128, 53);
             this.spbtnSua.TabIndex = 15;
@@ -189,7 +178,7 @@
             this.spbtnXoa.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spbtnXoa.Appearance.Options.UseFont = true;
             this.spbtnXoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("spbtnXoa.ImageOptions.SvgImage")));
-            this.spbtnXoa.Location = new System.Drawing.Point(277, 31);
+            this.spbtnXoa.Location = new System.Drawing.Point(352, 85);
             this.spbtnXoa.Name = "spbtnXoa";
             this.spbtnXoa.Size = new System.Drawing.Size(124, 53);
             this.spbtnXoa.TabIndex = 14;
@@ -201,7 +190,7 @@
             this.spbtnThem.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spbtnThem.Appearance.Options.UseFont = true;
             this.spbtnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("spbtnThem.ImageOptions.SvgImage")));
-            this.spbtnThem.Location = new System.Drawing.Point(22, 31);
+            this.spbtnThem.Location = new System.Drawing.Point(6, 85);
             this.spbtnThem.Name = "spbtnThem";
             this.spbtnThem.Size = new System.Drawing.Size(124, 53);
             this.spbtnThem.TabIndex = 13;
@@ -212,6 +201,7 @@
             // 
             this.dgvDanhSach.AllowUserToAddRows = false;
             this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -261,8 +251,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.spbtnSua);
-            this.groupBox2.Controls.Add(this.spbtnThoat);
             this.groupBox2.Controls.Add(this.spbtnThem);
             this.groupBox2.Controls.Add(this.spbtnXoa);
             this.groupBox2.Location = new System.Drawing.Point(12, 544);
@@ -273,6 +263,7 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTimKiem.Location = new System.Drawing.Point(533, 103);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
@@ -282,10 +273,11 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(530, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 16);
+            this.label6.Size = new System.Drawing.Size(155, 17);
             this.label6.TabIndex = 19;
             this.label6.Text = "Tìm kiếm khoa theo tên";
             // 
@@ -293,6 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1321, 782);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTimKiem);
@@ -300,6 +293,7 @@
             this.Controls.Add(this.dgvDanhSach);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "frmKhoa";
             this.Text = "frmKhoa";
             this.Load += new System.EventHandler(this.frmKhoa_Load);
@@ -324,7 +318,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.SimpleButton spbtnThoat;
         private DevExpress.XtraEditors.SimpleButton spbtnSua;
         private DevExpress.XtraEditors.SimpleButton spbtnXoa;
         private DevExpress.XtraEditors.SimpleButton spbtnThem;

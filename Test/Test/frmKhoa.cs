@@ -271,7 +271,7 @@ namespace Test
 
         private void frmKhoa_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void txtDT_KeyPress(object sender, KeyPressEventArgs e)

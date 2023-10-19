@@ -48,12 +48,11 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spbtnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.spbtnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnThem = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txttimkiem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txttimkiem = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -253,23 +252,12 @@
             this.spbtnSua.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spbtnSua.Appearance.Options.UseFont = true;
             this.spbtnSua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("spbtnSua.ImageOptions.SvgImage")));
-            this.spbtnSua.Location = new System.Drawing.Point(67, 123);
+            this.spbtnSua.Location = new System.Drawing.Point(461, 29);
             this.spbtnSua.Name = "spbtnSua";
             this.spbtnSua.Size = new System.Drawing.Size(128, 53);
             this.spbtnSua.TabIndex = 15;
             this.spbtnSua.Text = "Sửa";
             this.spbtnSua.Click += new System.EventHandler(this.spbtnSua_Click);
-            // 
-            // spbtnThoat
-            // 
-            this.spbtnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spbtnThoat.Appearance.Options.UseFont = true;
-            this.spbtnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("spbtnThoat.ImageOptions.SvgImage")));
-            this.spbtnThoat.Location = new System.Drawing.Point(274, 123);
-            this.spbtnThoat.Name = "spbtnThoat";
-            this.spbtnThoat.Size = new System.Drawing.Size(124, 53);
-            this.spbtnThoat.TabIndex = 16;
-            this.spbtnThoat.Text = "Thoát";
             // 
             // spbtnThem
             // 
@@ -300,24 +288,13 @@
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.spbtnThem);
             this.groupBox2.Controls.Add(this.spbtnSua);
-            this.groupBox2.Controls.Add(this.spbtnThoat);
             this.groupBox2.Controls.Add(this.spbtnXoa);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(342, 576);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(454, 198);
+            this.groupBox2.Size = new System.Drawing.Size(673, 198);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
-            // 
-            // txttimkiem
-            // 
-            this.txttimkiem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttimkiem.Location = new System.Drawing.Point(507, 343);
-            this.txttimkiem.Multiline = true;
-            this.txttimkiem.Name = "txttimkiem";
-            this.txttimkiem.Size = new System.Drawing.Size(626, 26);
-            this.txttimkiem.TabIndex = 18;
-            this.txttimkiem.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
             // 
             // label7
             // 
@@ -330,14 +307,25 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "tìm theo tên lớp";
             // 
+            // txttimkiem
+            // 
+            this.txttimkiem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txttimkiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txttimkiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.txttimkiem.Location = new System.Drawing.Point(486, 343);
+            this.txttimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txttimkiem.Name = "txttimkiem";
+            this.txttimkiem.Size = new System.Drawing.Size(578, 22);
+            this.txttimkiem.TabIndex = 20;
+            // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1378, 782);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txttimkiem);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvDanhSach);
             this.Controls.Add(this.groupBox1);
@@ -368,18 +356,17 @@
         private System.Windows.Forms.TextBox txtMalop;
         private System.Windows.Forms.DataGridView dgvDanhSach;
         private DevExpress.XtraEditors.SimpleButton spbtnSua;
-        private DevExpress.XtraEditors.SimpleButton spbtnThoat;
         private DevExpress.XtraEditors.SimpleButton spbtnThem;
         private DevExpress.XtraEditors.SimpleButton spbtnXoa;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cbxHeDaoTao;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txttimkiem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox txttimkiem;
     }
 }
