@@ -68,11 +68,11 @@ namespace Test
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.dgvBangDiem);
-            this.groupBox3.Location = new System.Drawing.Point(32, 362);
+            this.groupBox3.Location = new System.Drawing.Point(502, 138);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1178, 432);
+            this.groupBox3.Size = new System.Drawing.Size(1005, 724);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Mục Kết Quả";
@@ -111,13 +111,13 @@ namespace Test
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvBangDiem.Location = new System.Drawing.Point(3, 95);
+            this.dgvBangDiem.Location = new System.Drawing.Point(21, 90);
             this.dgvBangDiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvBangDiem.Name = "dgvBangDiem";
             this.dgvBangDiem.ReadOnly = true;
             this.dgvBangDiem.RowHeadersWidth = 51;
             this.dgvBangDiem.RowTemplate.Height = 24;
-            this.dgvBangDiem.Size = new System.Drawing.Size(1172, 334);
+            this.dgvBangDiem.Size = new System.Drawing.Size(978, 626);
             this.dgvBangDiem.TabIndex = 0;
             this.dgvBangDiem.SelectionChanged += new System.EventHandler(this.dgvBangDiem_SelectionChanged);
             // 
@@ -126,42 +126,49 @@ namespace Test
             this.Column1.HeaderText = "MSSV";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Họ Tên";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Tên Môn";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Điểm Lần 1";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Điểm Lần 2";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "TB Hệ Số";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Tb Hệ Chữ";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -174,11 +181,11 @@ namespace Test
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(194, 78);
+            this.groupBox1.Location = new System.Drawing.Point(12, 66);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(832, 166);
+            this.groupBox1.Size = new System.Drawing.Size(473, 315);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin điểm sinh viên";
@@ -188,14 +195,14 @@ namespace Test
             this.cbbTenMon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbbTenMon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbTenMon.FormattingEnabled = true;
-            this.cbbTenMon.Location = new System.Drawing.Point(109, 108);
+            this.cbbTenMon.Location = new System.Drawing.Point(163, 103);
             this.cbbTenMon.Name = "cbbTenMon";
-            this.cbbTenMon.Size = new System.Drawing.Size(245, 28);
+            this.cbbTenMon.Size = new System.Drawing.Size(249, 28);
             this.cbbTenMon.TabIndex = 14;
             // 
             // txtBangDiemDiemLan2
             // 
-            this.txtBangDiemDiemLan2.Location = new System.Drawing.Point(569, 111);
+            this.txtBangDiemDiemLan2.Location = new System.Drawing.Point(163, 227);
             this.txtBangDiemDiemLan2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBangDiemDiemLan2.Name = "txtBangDiemDiemLan2";
             this.txtBangDiemDiemLan2.Size = new System.Drawing.Size(249, 26);
@@ -203,7 +210,7 @@ namespace Test
             // 
             // txtBangDiemDiemLan1
             // 
-            this.txtBangDiemDiemLan1.Location = new System.Drawing.Point(569, 49);
+            this.txtBangDiemDiemLan1.Location = new System.Drawing.Point(163, 165);
             this.txtBangDiemDiemLan1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBangDiemDiemLan1.Name = "txtBangDiemDiemLan1";
             this.txtBangDiemDiemLan1.Size = new System.Drawing.Size(249, 26);
@@ -213,16 +220,16 @@ namespace Test
             // 
             this.txtBangDiemMSSV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtBangDiemMSSV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.txtBangDiemMSSV.Location = new System.Drawing.Point(109, 59);
+            this.txtBangDiemMSSV.Location = new System.Drawing.Point(163, 53);
             this.txtBangDiemMSSV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBangDiemMSSV.Name = "txtBangDiemMSSV";
-            this.txtBangDiemMSSV.Size = new System.Drawing.Size(245, 26);
+            this.txtBangDiemMSSV.Size = new System.Drawing.Size(249, 26);
             this.txtBangDiemMSSV.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(434, 114);
+            this.label6.Location = new System.Drawing.Point(28, 230);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 20);
             this.label6.TabIndex = 8;
@@ -231,7 +238,7 @@ namespace Test
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(434, 55);
+            this.label5.Location = new System.Drawing.Point(28, 171);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 20);
             this.label5.TabIndex = 7;
@@ -262,21 +269,21 @@ namespace Test
             this.groupBox6.Controls.Add(this.simpleButton6);
             this.groupBox6.Controls.Add(this.simpleButton7);
             this.groupBox6.Controls.Add(this.simpleButton8);
-            this.groupBox6.Location = new System.Drawing.Point(194, 252);
+            this.groupBox6.Location = new System.Drawing.Point(12, 382);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox6.Size = new System.Drawing.Size(832, 102);
+            this.groupBox6.Size = new System.Drawing.Size(473, 188);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
             // 
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
-            this.simpleButton5.Location = new System.Drawing.Point(684, 26);
+            this.simpleButton5.Location = new System.Drawing.Point(302, 101);
             this.simpleButton5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(105, 54);
+            this.simpleButton5.Size = new System.Drawing.Size(110, 54);
             this.simpleButton5.TabIndex = 16;
             this.simpleButton5.Text = "Thoát";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
@@ -284,10 +291,10 @@ namespace Test
             // simpleButton6
             // 
             this.simpleButton6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton6.ImageOptions.SvgImage")));
-            this.simpleButton6.Location = new System.Drawing.Point(495, 26);
+            this.simpleButton6.Location = new System.Drawing.Point(64, 101);
             this.simpleButton6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(115, 54);
+            this.simpleButton6.Size = new System.Drawing.Size(105, 54);
             this.simpleButton6.TabIndex = 15;
             this.simpleButton6.Text = "Sửa";
             this.simpleButton6.Click += new System.EventHandler(this.btnSua_Click);
@@ -295,7 +302,7 @@ namespace Test
             // simpleButton7
             // 
             this.simpleButton7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton7.ImageOptions.SvgImage")));
-            this.simpleButton7.Location = new System.Drawing.Point(316, 26);
+            this.simpleButton7.Location = new System.Drawing.Point(302, 27);
             this.simpleButton7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton7.Name = "simpleButton7";
             this.simpleButton7.Size = new System.Drawing.Size(110, 54);
@@ -306,7 +313,7 @@ namespace Test
             // simpleButton8
             // 
             this.simpleButton8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton8.ImageOptions.SvgImage")));
-            this.simpleButton8.Location = new System.Drawing.Point(163, 26);
+            this.simpleButton8.Location = new System.Drawing.Point(64, 27);
             this.simpleButton8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton8.Name = "simpleButton8";
             this.simpleButton8.Size = new System.Drawing.Size(105, 54);
@@ -319,7 +326,7 @@ namespace Test
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(463, 9);
+            this.label11.Location = new System.Drawing.Point(491, 40);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(310, 65);
             this.label11.TabIndex = 9;
@@ -331,7 +338,7 @@ namespace Test
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1238, 918);
+            this.ClientSize = new System.Drawing.Size(1519, 918);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox3);
