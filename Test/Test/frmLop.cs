@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraRichEdit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Test.Model1;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Test
 {
@@ -81,7 +83,7 @@ namespace Test
             bool trungtenlop = context.Lops.Any(k => k.TenLop == txtTenlop.Text);
             if (trungtenlop)
             {
-                MessageBox.Show("Tên khoa đã tồn tại, vui lòng nhập tên khác", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Tên lớp đã tồn tại, vui lòng nhập tên khác", "Thông báo", MessageBoxButtons.OK);
                 return true;
             }
             return false;
@@ -151,7 +153,6 @@ namespace Test
             try
             {
 
-                if (!KTTrung(txtMalop.Text, txtTenlop.Text))
                 {
                     Lop deleteL = context.Lops.FirstOrDefault(s => s.MaLop == txtMalop.Text);
                     if (deleteL != null)
@@ -173,11 +174,26 @@ namespace Test
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        private bool KTTenKhoa(string tenmoi, string tencu)
+        {
+            for (int i = 0; i < dgvDanhSach.Rows.Count; i++)
+            {
+                if (i != dgvDanhSach.CurrentRow.Index)
+                {
+                    string tenlop = dgvDanhSach.Rows[i].Cells[1].Value.ToString();
+                    if (tenlop == tenmoi)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         private void spbtnSua_Click(object sender, EventArgs e)
         {
             try
             {
+                Lop updateL = context.Lops.FirstOrDefault(s => s.MaLop == txtMalop.Text);
                 if (checkNull() == true)
                 {
                     MessageBox.Show("Nhập thiếu thông tin", "Thông báo", MessageBoxButtons.OK);
@@ -185,21 +201,33 @@ namespace Test
                 }
                 else
                 {
+                        if (updateL != null)
+                        {
+                            string tencu = updateL.TenLop;
+                            string tenmoi = txtTenlop.Text;
+                            if (KTTenKhoa(tenmoi, tencu) == true)
+                            {
+                                MessageBox.Show("Trùng tên Lớp", "Thông báo", MessageBoxButtons.OK);
+                            }
+                            else
+                            {
+                            updateL.TenLop = txtTenlop.Text;
+                            updateL.MaKhoa = cbxMaKhoa.SelectedValue.ToString();
+                            updateL.MaHeDT = cbxHeDaoTao.SelectedValue.ToString();
+                            updateL.MaKhoaHoc = cbxMaKhoaHoc.SelectedValue.ToString();
+                            context.SaveChanges();
+                            List<Lop> listK = context.Lops.ToList();
+                            BindDataGrid(listK);
+                            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
+                             }
+                            
+                        }
+                        else 
+                        {
+                            MessageBox.Show("Lớp không tồn tại trong danh sách","Thông báo",MessageBoxButtons.OK);
+                         }
 
-                    Lop updateL = context.Lops.FirstOrDefault(s => s.MaLop == txtMalop.Text);
-                    if (updateL != null)
-                    {
-                        updateL.TenLop = txtTenlop.Text;
-                        updateL.MaKhoa = cbxMaKhoa.SelectedValue.ToString();
-                        updateL.MaHeDT = cbxHeDaoTao.SelectedValue.ToString();
-                        updateL.MaKhoaHoc = cbxMaKhoaHoc.SelectedValue.ToString();
-                        context.SaveChanges();
-                        List<Lop> listK = context.Lops.ToList();
-                        BindDataGrid(listK);
-                        MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
                     }
-
-                }
 
             }
             catch (Exception ex)// neu xay ra loi

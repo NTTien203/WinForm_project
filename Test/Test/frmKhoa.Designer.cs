@@ -58,7 +58,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtDT);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtTenKhoa);
@@ -152,7 +151,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(483, 9);
@@ -214,7 +212,6 @@
             // 
             this.dgvDanhSach.AllowUserToAddRows = false;
             this.dgvDanhSach.AllowUserToDeleteRows = false;
-            this.dgvDanhSach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -264,7 +261,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.spbtnSua);
             this.groupBox2.Controls.Add(this.spbtnThoat);
             this.groupBox2.Controls.Add(this.spbtnThem);
@@ -274,11 +270,9 @@
             this.groupBox2.Size = new System.Drawing.Size(515, 226);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTimKiem.Location = new System.Drawing.Point(533, 103);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
@@ -288,11 +282,10 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(530, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 17);
+            this.label6.Size = new System.Drawing.Size(145, 16);
             this.label6.TabIndex = 19;
             this.label6.Text = "Tìm kiếm khoa theo tên";
             // 
@@ -300,7 +293,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1321, 782);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTimKiem);
