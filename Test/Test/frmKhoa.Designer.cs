@@ -44,13 +44,13 @@
             this.spbtnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.spbtnThem = new DevExpress.XtraEditors.SimpleButton();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -227,37 +227,6 @@
             this.dgvDanhSach.TabIndex = 8;
             this.dgvDanhSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellClick);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.spbtnSua);
-            this.groupBox2.Controls.Add(this.spbtnThoat);
-            this.groupBox2.Controls.Add(this.spbtnThem);
-            this.groupBox2.Controls.Add(this.spbtnXoa);
-            this.groupBox2.Location = new System.Drawing.Point(12, 544);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(515, 226);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(533, 103);
-            this.txtTimKiem.Multiline = true;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(776, 29);
-            this.txtTimKiem.TabIndex = 18;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(530, 84);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 16);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Tìm kiếm khoa theo tên";
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -289,6 +258,36 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.spbtnSua);
+            this.groupBox2.Controls.Add(this.spbtnThoat);
+            this.groupBox2.Controls.Add(this.spbtnThem);
+            this.groupBox2.Controls.Add(this.spbtnXoa);
+            this.groupBox2.Location = new System.Drawing.Point(12, 544);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(515, 226);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(533, 103);
+            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(776, 29);
+            this.txtTimKiem.TabIndex = 18;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(530, 84);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 16);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Tìm kiếm khoa theo tên";
             // 
             // frmKhoa
             // 

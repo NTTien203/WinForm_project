@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
@@ -21,11 +22,13 @@ namespace Test
 
         public bool checkNull()
         {
-            if (txtMaKhoa.Text == "" || txtTenKhoa.Text == "" || txtDiaChi.Text == "" || txtDT.Text == "")
+            if (txtMaKhoa.Text == "" || txtTenKhoa.Text == "" || txtDiaChi.Text == "" || txtDT.Text == "" ||txtDT.Text.Length<=9)
             {
                 return true;
             }
-            return false;
+             
+                return false;
+            
         }
         public void BindDaTaGrid(List<Khoa> k)
         {
@@ -42,8 +45,6 @@ namespace Test
         }
         public Boolean KTTrung(string maKhoa, string tenKhoa)
         {
-            maKhoa = maKhoa.Trim().ToLower();
-            tenKhoa = tenKhoa.Trim().ToLower();
             bool trungmakhoa = context.Khoas.Any(k => k.MaKhoa == txtMaKhoa.Text);
             if (trungmakhoa)
             {
@@ -59,6 +60,7 @@ namespace Test
             return false;
 
         }
+        
         public frmKhoa()
         {
             InitializeComponent();
@@ -79,9 +81,9 @@ namespace Test
         {
             try
             {
-                if (checkNull() == true)
+                if (checkNull() == true )
                 {
-                    MessageBox.Show("Nhập thiếu thông tin", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Nhập thiếu thông tin hoặc số điện thoại ít hơn 10", "Thông báo", MessageBoxButtons.OK);
 
                 }
                 else
@@ -97,7 +99,6 @@ namespace Test
                             DienThoai = txtDT.Text,
 
                         };
-
                         context.Khoas.Add(s);
                         context.SaveChanges();
                         List<Khoa> listDG = context.Khoas.ToList();
@@ -178,36 +179,56 @@ namespace Test
                 MessageBox.Show(ex.ToString());
             }
         }
+        public Boolean KTTrungTenKhoa(string tenKhoa)
+        {
+            bool trungtenkhoa = context.Khoas.Any(k => k.TenKhoa == txtTenKhoa.Text);
+            if (trungtenkhoa)
+            {
+                MessageBox.Show("Tên khoa đã tồn tại, vui lòng nhập tên khác", "Thông báo", MessageBoxButtons.OK);
+                return true;
+            }
+            return false;
 
+        }
         private void spbtnSua_Click(object sender, EventArgs e)
         {
             try
             {
                 if (checkNull() == true)
                 {
-                    MessageBox.Show("Nhập thiếu thông tin", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Nhập thiếu thông tin, hoặc số điện thoại ít hơn 10", "Thông báo", MessageBoxButtons.OK);
                     return;
                 }
                 else
                 {
-                    if (!KTTrung(txtMaKhoa.Text, txtTenKhoa.Text))
-                    {
+                    Khoa updateK = context.Khoas.FirstOrDefault(s => s.MaKhoa == txtMaKhoa.Text);
+                    string tenmoi = txtTenKhoa.Text;
+                    
 
-                        Khoa updateK = context.Khoas.FirstOrDefault(s => s.MaKhoa == txtMaKhoa.Text);
-                        if (updateK != null)
+                    if (updateK != null)
+                    {
+                        string tencu = updateK.TenKhoa;
+                        if (KTTenKhoa(tenmoi, tencu) == true)
+                        {
+                            MessageBox.Show("Trùng tên khoa","Thông báo",MessageBoxButtons.OK);
+                        }
+                        else
                         {
                             updateK.TenKhoa = txtTenKhoa.Text;
                             updateK.DiaChi = txtDiaChi.Text;
                             updateK.DienThoai = txtDT.Text;
-
-
-
                             context.SaveChanges();
                             List<Khoa> listK = context.Khoas.ToList();
                             BindDaTaGrid(listK);
                             MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
+
                         }
                     }
+                    if (updateK == null)
+                    {
+                        MessageBox.Show("Khoa không tồn tại","Thông báo",MessageBoxButtons.OK);
+                    }
+                    
                 }
 
             }
@@ -217,7 +238,21 @@ namespace Test
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        private bool KTTenKhoa(string tenmoi, string tencu)
+        {
+            for(int i = 0;i<dgvDanhSach.Rows.Count;i++)
+            {
+                if (i != dgvDanhSach.CurrentRow.Index)
+                {
+                    string tenkhoa = dgvDanhSach.Rows[i].Cells[1].Value.ToString();
+                    if(tenkhoa == tenmoi)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         private void dgvDanhSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var a = dgvDanhSach.CurrentRow;
@@ -247,6 +282,15 @@ namespace Test
                 MessageBox.Show("Chỉ nhập số", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
+            string dt = txtDT.Text + e.KeyChar;
+            if (txtDT.Text.Length==10 && e.KeyChar != (char)Keys.Back)
+            {
+                
+                
+                    e.Handled = true;
+                    MessageBox.Show("Số điện thoại phải có 10 số", "Thông báo", MessageBoxButtons.OK);
+                
+            }
         }
 
 
@@ -258,5 +302,7 @@ namespace Test
                 MessageBox.Show("Chỉ nhập chữ", "Thông báo", MessageBoxButtons.OK);
             }
         }
+
+       
     }
 }
