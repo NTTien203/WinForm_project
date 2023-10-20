@@ -56,7 +56,7 @@ namespace Test
                 MessageBox.Show("Trung MMH roi!!");
                 BindGrid(listMonHoc);
             }
-          
+
         }
         //Button Xoa
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace Test
             }
             else
             {
-               
+
                 db.TenMH = textBox2.Text;
                 db.SoTC = int.Parse(textBox3.Text);
 
@@ -115,6 +115,12 @@ namespace Test
         private void Form6_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            var dg = context.MonHocs.Where(s => s.TenMH.Contains(txtTimKiem.Text)).ToList();
+            BindGrid(dg);
         }
     }
 }
