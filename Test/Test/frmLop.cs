@@ -18,8 +18,8 @@ namespace Test
         static DBQuanLySV context = new DBQuanLySV();
         List<Lop> listL = context.Lops.ToList();
         List<Khoa> listk = context.Khoas.ToList();
-        List<KhoaHoc>listKH = context.KhoaHocs.ToList();
-        List<HeDT>listHDH = context.HeDTs.ToList();
+        List<KhoaHoc> listKH = context.KhoaHocs.ToList();
+        List<HeDT> listHDT = context.HeDTs.ToList();
         public void fillMaKhoatoCombobox()
         {
             cbxMaKhoa.DataSource = listk;
@@ -34,7 +34,7 @@ namespace Test
         }
         public void fillMaHeDTCombobox()
         {
-            cbxHeDaoTao.DataSource = listL;
+            cbxHeDaoTao.DataSource = listHDT;
             cbxHeDaoTao.ValueMember = "MaHeDT";
             cbxHeDaoTao.DisplayMember = "TenHeDT";
         }
@@ -54,12 +54,12 @@ namespace Test
                 int index = dgvDanhSach.Rows.Add();
                 dgvDanhSach.Rows[index].Cells[0].Value = item.MaLop;
                 dgvDanhSach.Rows[index].Cells[1].Value = item.TenLop;
-                dgvDanhSach.Rows[index].Cells[2].Value = item.Khoa.TenKhoa.ToString();
-                dgvDanhSach.Rows[index].Cells[3].Value = item.HeDT.MaHeDT.ToString();
-                dgvDanhSach.Rows[index].Cells[4].Value = item.KhoaHoc.TenKhoaHoc.ToString();
+                dgvDanhSach.Rows[index].Cells[2].Value = item.Khoa.TenKhoa;
+                dgvDanhSach.Rows[index].Cells[3].Value = item.HeDT.TenHeDT;
+                dgvDanhSach.Rows[index].Cells[4].Value = item.KhoaHoc.TenKhoaHoc;
 
             }
-            
+
         }
         public frmLop()
         {
@@ -103,7 +103,7 @@ namespace Test
             cbxMaKhoa.Text = a.Cells[2].Value.ToString();
             cbxHeDaoTao.Text = a.Cells[3].Value.ToString();
             cbxMaKhoaHoc.Text = a.Cells[4].Value.ToString();
-            
+
         }
 
         private void spbtnThem_Click(object sender, EventArgs e)
@@ -201,16 +201,16 @@ namespace Test
                 }
                 else
                 {
-                        if (updateL != null)
+                    if (updateL != null)
+                    {
+                        string tencu = updateL.TenLop;
+                        string tenmoi = txtTenlop.Text;
+                        if (KTTenKhoa(tenmoi, tencu) == true)
                         {
-                            string tencu = updateL.TenLop;
-                            string tenmoi = txtTenlop.Text;
-                            if (KTTenKhoa(tenmoi, tencu) == true)
-                            {
-                                MessageBox.Show("Trùng tên Lớp", "Thông báo", MessageBoxButtons.OK);
-                            }
-                            else
-                            {
+                            MessageBox.Show("Trùng tên Lớp", "Thông báo", MessageBoxButtons.OK);
+                        }
+                        else
+                        {
                             updateL.TenLop = txtTenlop.Text;
                             updateL.MaKhoa = cbxMaKhoa.SelectedValue.ToString();
                             updateL.MaHeDT = cbxHeDaoTao.SelectedValue.ToString();
@@ -219,15 +219,15 @@ namespace Test
                             List<Lop> listK = context.Lops.ToList();
                             BindDataGrid(listK);
                             MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
-                             }
-                            
                         }
-                        else 
-                        {
-                            MessageBox.Show("Lớp không tồn tại trong danh sách","Thông báo",MessageBoxButtons.OK);
-                         }
 
                     }
+                    else
+                    {
+                        MessageBox.Show("Lớp không tồn tại trong danh sách", "Thông báo", MessageBoxButtons.OK);
+                    }
+
+                }
 
             }
             catch (Exception ex)// neu xay ra loi

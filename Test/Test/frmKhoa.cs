@@ -260,7 +260,6 @@ namespace Test
             txtTenKhoa.Text = a.Cells[1].Value.ToString();
             txtDiaChi.Text = a.Cells[2].Value.ToString();
             txtDT.Text = a.Cells[3].Value.ToString();
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -303,6 +302,64 @@ namespace Test
             }
         }
 
-       
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
