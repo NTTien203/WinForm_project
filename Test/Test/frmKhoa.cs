@@ -30,6 +30,14 @@ namespace Test
                 return false;
             
         }
+        public bool checkTrung(string tenmoi)
+        {
+            DBQuanLySV context = new DBQuanLySV();
+            Khoa d = context.Khoas.FirstOrDefault(a => a.TenKhoa == tenmoi);
+            if (d != null)
+                return true;
+            return false;
+        }
         public void BindDaTaGrid(List<Khoa> k)
         {
             dgvDanhSach.Rows.Clear();
@@ -214,13 +222,21 @@ namespace Test
                         }
                         else
                         {
-                            updateK.TenKhoa = txtTenKhoa.Text;
-                            updateK.DiaChi = txtDiaChi.Text;
-                            updateK.DienThoai = txtDT.Text;
-                            context.SaveChanges();
-                            List<Khoa> listK = context.Khoas.ToList();
-                            BindDaTaGrid(listK);
-                            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
+                            if (checkTrung(tenmoi))
+                            {
+                                MessageBox.Show("Trùng tên khoa", "Thông báo", MessageBoxButtons.OK);
+                            }
+                            else
+                            {
+                                updateK.TenKhoa = txtTenKhoa.Text;
+                                updateK.DiaChi = txtDiaChi.Text;
+                                updateK.DienThoai = txtDT.Text;
+                                context.SaveChanges();
+                                List<Khoa> listK = context.Khoas.ToList();
+                                BindDaTaGrid(listK);
+                                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
+                            }
+                            
 
                         }
                     }
