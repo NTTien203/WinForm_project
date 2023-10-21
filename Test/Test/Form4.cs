@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test.Model;
+using Test.Model1;
 
 namespace Test
 {
@@ -55,7 +55,7 @@ namespace Test
                 dataGridView1.Rows[index].Cells[2].Value = st.NgaySinh.ToString();
                 dataGridView1.Rows[index].Cells[3].Value = st.GioiTinh;
                 dataGridView1.Rows[index].Cells[4].Value = st.QueQuan;
-                dataGridView1.Rows[index].Cells[5].Value = st.SDT;
+                // dataGridView1.Rows[index].Cells[5].Value = st.SDT;
                 dataGridView1.Rows[index].Cells[6].Value = st.Lop.TenLop;
                 dataGridView1.Rows[index].Cells[7].Value = st.Lop.Khoa.TenKhoa;
                 dataGridView1.Rows[index].Cells[8].Value = st.Lop.Khoa.TenKhoa;
@@ -142,6 +142,7 @@ namespace Test
             //changeclassbyfalculty();
             //changekhoahocandhedaotaobyALLCLassbyFalculty();
             radioButton1.Checked = true;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
@@ -184,7 +185,7 @@ namespace Test
                     GioiTinh = (radioButton1.Checked) ? "Nam" : "Nữ",
                     MaLop = cmblop.SelectedValue.ToString(),
                     QueQuan = txtquequan.Text,
-                    SDT = txtdienthoai.Text
+                    //SDT = txtdienthoai.Text
                 };
                 db.SinhViens.Add(b);
                 db.SaveChanges();
@@ -268,7 +269,7 @@ namespace Test
             {
                 a.MaSV = txtmaso.Text;
                 if (txthoten.Text != "") a.TenSV = txthoten.Text;
-                if (txtdienthoai.Text != "") a.SDT = txtdienthoai.Text;
+                //if (txtdienthoai.Text != "") a.SDT = txtdienthoai.Text;
                 a.NgaySinh = dateTimePicker1.Value;
                 a.MaLop = cmblop.SelectedValue.ToString();
                 //MessageBox.Show(cmblop.SelectedValue.ToString(), "Thong bao", MessageBoxButtons.OK);
@@ -292,7 +293,7 @@ namespace Test
         {
             //string s = (radioButton1.Checked) ? "Nam" : "Nữ";
             var c = db.SinhViens.Where(p => p.MaSV.Contains(txttim.Text) || p.TenSV.Contains(txttim.Text)
-            || p.SDT.Contains(txttim.Text) || p.QueQuan.Contains(txttim.Text) ||
+             || p.QueQuan.Contains(txttim.Text) || // || p.SDT.Contains(txttim.Text)
             p.Lop.TenLop.Contains(txttim.Text) || p.Lop.Khoa.TenKhoa.Contains(txttim.Text) ||
             p.Lop.KhoaHoc.TenKhoaHoc.Contains(txttim.Text) || p.Lop.HeDT.TenHeDT.Contains(txttim.Text)
             || p.GioiTinh.Contains(txttim.Text)
@@ -306,7 +307,7 @@ namespace Test
                 dataGridView1.Rows[index].Cells[2].Value = st.NgaySinh.ToString();
                 dataGridView1.Rows[index].Cells[3].Value = st.GioiTinh;
                 dataGridView1.Rows[index].Cells[4].Value = st.QueQuan;
-                dataGridView1.Rows[index].Cells[5].Value = st.SDT;
+                //dataGridView1.Rows[index].Cells[5].Value = st.SDT;
                 dataGridView1.Rows[index].Cells[6].Value = st.Lop.TenLop;
                 dataGridView1.Rows[index].Cells[7].Value = st.Lop.Khoa.TenKhoa;
                 dataGridView1.Rows[index].Cells[8].Value = st.Lop.Khoa.TenKhoa;
@@ -322,10 +323,6 @@ namespace Test
             changekhoahocandhedaotaobyclass();
         }
 
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
     }
 }
 
