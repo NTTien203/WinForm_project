@@ -15,11 +15,64 @@ namespace Test
     {
         static DBQuanLySV context = new DBQuanLySV();
         List<MonHoc> listMonHoc = context.MonHocs.ToList();
+
         public Form6()
         {
             InitializeComponent();
-            BindGrid(listMonHoc);
         }
+        public bool checkTrung(string tenmoi)
+        {
+            DBQuanLySV context = new DBQuanLySV();
+            MonHoc d = context.MonHocs.FirstOrDefault(a => a.TenMH == tenmoi);
+            if (d != null)
+                return true;
+            return false;
+        }
+
+        public bool checkNull()
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+                return true;
+            return false;
+        }
+
+        private bool KTTenMon(string tenmoi, string tencu)
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                if (i != dataGridView1.CurrentRow.Index)
+                {
+                    string tenMon = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    if (tenMon == tenmoi)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public Boolean KTTrung(string maMon, string tenMon)
+        {
+
+            DBQuanLySV context = new DBQuanLySV();
+
+            bool trungMaMon = context.MonHocs.Any(k => k.MaMH == maMon);
+            if (trungMaMon)
+            {
+                MessageBox.Show("Mã Môn đã tồn tại, vui lòng nhập mã khác", "Thông báo", MessageBoxButtons.OK);
+                return true;
+            }
+
+            bool trungTenMon = context.MonHocs.Any(k => k.TenMH == tenMon);
+            if (trungTenMon)
+            {
+                MessageBox.Show("Tên Môn đã tồn tại, vui lòng nhập tên khác", "Thông báo", MessageBoxButtons.OK);
+                return true;
+            }
+            return false;
+        }
+
         //Show Thong tin Bang
         void BindGrid(List<MonHoc> listMonHoc)
         {
@@ -32,74 +85,140 @@ namespace Test
                 dataGridView1.Rows[index].Cells[2].Value = item.SoTC;
             }
         }
+
         //Button Them
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             try
             {
-                MonHoc monhoc = new MonHoc()
+                if (checkNull() == true)
                 {
+                    MessageBox.Show("Thiếu thông tin", "Thông báo", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    if (!KTTrung(textBox1.Text, textBox2.Text))
+                    {
+                        MonHoc monhoc = new MonHoc()
+                        {
 
-                    MaMH = textBox1.Text,
-                    TenMH = textBox2.Text,
-                    SoTC = int.Parse(textBox3.Text),
-                };
-                dataGridView1.Rows.Clear();
-                context.MonHocs.Add(monhoc);
-                context.SaveChanges();
-                listMonHoc = context.MonHocs.ToList();
-                BindGrid(listMonHoc);
-                MessageBox.Show("Them Thong Tin Thanh cong");
+                            MaMH = textBox1.Text,
+                            TenMH = textBox2.Text,
+                            SoTC = int.Parse(textBox3.Text),
+                        };
+                        DBQuanLySV context = new DBQuanLySV();
+                        context.MonHocs.Add(monhoc);
+                        context.SaveChanges();
+                        List<MonHoc> listMonHoc = context.MonHocs.ToList();
+                        listMonHoc = context.MonHocs.ToList();
+                        BindGrid(listMonHoc);
+                        MessageBox.Show("Them Thong Tin Thanh cong");
+                    }
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Trung MMH roi!!");
+                MessageBox.Show(ex.ToString());
                 BindGrid(listMonHoc);
             }
 
         }
+       
+        private bool checkMonhocinDiem(string maMH)
+        {
+            DBQuanLySV context = new DBQuanLySV();
+            Diem d = context.Diems.FirstOrDefault(a => a.MaMH == maMH);
+            if (d != null)
+                return true;
+            return false;
+        }
+
         //Button Xoa
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            string id = textBox1.Text;
-            MonHoc db = context.MonHocs.FirstOrDefault(s => s.MaMH == id);
-            if (db == null)
+            try
             {
-                MessageBox.Show("Không tìm thấy mon hoc co MMH do!!!", "Thông báo", MessageBoxButtons.OK);
+                DBQuanLySV context = new DBQuanLySV();
+                MonHoc m = context.MonHocs.FirstOrDefault(s => s.MaMH == textBox1.Text);
+                if (m != null)
+                {
+                    if (checkMonhocinDiem(m.MaMH) == false)
+                    {
+                        context.MonHocs.Remove(m);
+                        context.SaveChanges();
+                        List<MonHoc> listMonHoc = context.MonHocs.ToList();
+                        BindGrid(listMonHoc);
+                        MessageBox.Show("Xoa Thong Tin thanh cong");
+                    }
+                    else
+                        MessageBox.Show("Sinh viên có điểm trong môn học này, không thể xóa!", "Thông báo");
+                }
+                else
+
+                    MessageBox.Show("Không tìm thấy mon hoc co MMH do!!!", "Thông báo", MessageBoxButtons.OK);
             }
-            else
+            catch (Exception ex)
             {
-                context.MonHocs.Remove(db);
-                context.SaveChanges();
-                dataGridView1.Rows.Clear();
-                listMonHoc = context.MonHocs.ToList();
-                BindGrid(listMonHoc);
-                MessageBox.Show("Xoa Thong Tin thanh cong");
+                MessageBox.Show(ex.ToString());
             }
         }
+
         //Sua Thong Tin
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            string id = textBox1.Text;
-            MonHoc db = context.MonHocs.FirstOrDefault(s => s.MaMH == id);
-            if (db == null)
+            try
             {
-                MessageBox.Show("Không tìm thấy mon hoc co MMH do!!!", "Thông báo", MessageBoxButtons.OK);
+                DBQuanLySV context = new DBQuanLySV();
+                if (checkNull() == true)
+                {
+                    MessageBox.Show("Thieu thong tin", "Thong bao", MessageBoxButtons.OK);
+                    return;
+                }
+                else
+                {
+                    MonHoc db = context.MonHocs.FirstOrDefault(s => s.MaMH == textBox1.Text);
+                    string tenmoi = textBox2.Text;
+                    if (db != null)
+                    {
+                        string tencu = db.TenMH;
+                        if (KTTenMon(tenmoi, tencu) == true)
+                        {
+                            MessageBox.Show("Trùng tên Môn", "Thông báo", MessageBoxButtons.OK);
+                        }
+                        else
+                        {
+                            if (checkTrung(tenmoi))
+                            {
+                                MessageBox.Show("Trùng tên Môn", "Thông báo", MessageBoxButtons.OK);
+                            }
+                            else
+                            {
+                                db.TenMH = textBox2.Text;
+                                db.SoTC = int.Parse(textBox3.Text);
+                                context.SaveChanges();
+                                dataGridView1.Rows.Clear();
+                                listMonHoc = context.MonHocs.ToList();
+                                BindGrid(listMonHoc);
+                                MessageBox.Show("Sua Thong Tin thanh cong");
+                            }
+                                
+                            
+                            
+                        }
+                    }
+                    if (db == null)
+                    {
+                        MessageBox.Show("Mon không tồn tại", "Thông báo", MessageBoxButtons.OK);
+                    }
+                }
             }
-            else
+            catch (Exception ex)// neu xay ra loi
             {
-
-                db.TenMH = textBox2.Text;
-                db.SoTC = int.Parse(textBox3.Text);
-
-
-                context.SaveChanges();
-                dataGridView1.Rows.Clear();
-                listMonHoc = context.MonHocs.ToList();
-                BindGrid(listMonHoc);
-                MessageBox.Show("Sua Thong Tin thanh cong");
+                List<Khoa> listK = context.Khoas.ToList();
+                MessageBox.Show(ex.ToString());
             }
         }
+
         //Tran` Thong Tin vo TextBox
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -115,12 +234,18 @@ namespace Test
         private void Form6_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            BindGrid(listMonHoc);
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             var dg = context.MonHocs.Where(s => s.TenMH.Contains(txtTimKiem.Text)).ToList();
             BindGrid(dg);
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

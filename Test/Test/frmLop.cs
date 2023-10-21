@@ -38,6 +38,14 @@ namespace Test
             cbxHeDaoTao.ValueMember = "MaHeDT";
             cbxHeDaoTao.DisplayMember = "TenHeDT";
         }
+        public bool checkTrung(string tenmoi)
+        {
+            DBQuanLySV context = new DBQuanLySV();
+            Lop d = context.Lops.FirstOrDefault(a => a.TenLop == tenmoi);
+            if (d != null)
+                return true;
+            return false;
+        }
         public bool checkNull()
         {
             if (txtMalop.Text == "" || txtTenlop.Text == "" || cbxMaKhoa.Text == "" || cbxMaKhoaHoc.Text == "")
@@ -211,14 +219,22 @@ namespace Test
                         }
                         else
                         {
-                            updateL.TenLop = txtTenlop.Text;
-                            updateL.MaKhoa = cbxMaKhoa.SelectedValue.ToString();
-                            updateL.MaHeDT = cbxHeDaoTao.SelectedValue.ToString();
-                            updateL.MaKhoaHoc = cbxMaKhoaHoc.SelectedValue.ToString();
-                            context.SaveChanges();
-                            List<Lop> listK = context.Lops.ToList();
-                            BindDataGrid(listK);
-                            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
+                            if (checkTrung(tenmoi))
+                            {
+                                MessageBox.Show("Trùng tên lớp", "Thông báo", MessageBoxButtons.OK);
+                            }
+                            else
+                            {
+                                updateL.TenLop = txtTenlop.Text;
+                                updateL.MaKhoa = cbxMaKhoa.SelectedValue.ToString();
+                                updateL.MaHeDT = cbxHeDaoTao.SelectedValue.ToString();
+                                updateL.MaKhoaHoc = cbxMaKhoaHoc.SelectedValue.ToString();
+                                context.SaveChanges();
+                                List<Lop> listK = context.Lops.ToList();
+                                BindDataGrid(listK);
+                                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
+                            }
+                          
                         }
 
                     }
