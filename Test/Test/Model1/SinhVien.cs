@@ -37,7 +37,7 @@ namespace Test.Model1
         [Required]
         [StringLength(10)]
         public string MaLop { get; set; }
-
+       
         public virtual Lop Lop { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

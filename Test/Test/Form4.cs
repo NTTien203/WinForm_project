@@ -56,11 +56,11 @@ namespace Test
                 dataGridView1.Rows[index].Cells[3].Value = st.GioiTinh;
                 dataGridView1.Rows[index].Cells[4].Value = st.QueQuan;
                 // dataGridView1.Rows[index].Cells[5].Value = st.SDT;
-                dataGridView1.Rows[index].Cells[6].Value = st.Lop.TenLop;
+                dataGridView1.Rows[index].Cells[5].Value = st.Lop.TenLop;
+                dataGridView1.Rows[index].Cells[6].Value = st.Lop.Khoa.TenKhoa;
                 dataGridView1.Rows[index].Cells[7].Value = st.Lop.Khoa.TenKhoa;
-                dataGridView1.Rows[index].Cells[8].Value = st.Lop.Khoa.TenKhoa;
-                dataGridView1.Rows[index].Cells[9].Value = st.Lop.KhoaHoc.TenKhoaHoc;
-                dataGridView1.Rows[index].Cells[10].Value = st.Lop.HeDT.TenHeDT;
+                dataGridView1.Rows[index].Cells[8].Value = st.Lop.KhoaHoc.TenKhoaHoc;
+                dataGridView1.Rows[index].Cells[9].Value = st.Lop.HeDT.TenHeDT;
 
             }
 
@@ -148,20 +148,20 @@ namespace Test
         private void dataGridView1_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = dataGridView1.CurrentRow;
-            txtmaso.Text = selectedRow.Cells[0].Value.ToString();
+           d= txtmaso.Text = selectedRow.Cells[0].Value.ToString();
             txthoten.Text = selectedRow.Cells[1].Value.ToString();
             dateTimePicker1.Text = selectedRow.Cells[2].Value.ToString();
             if (selectedRow.Cells[3].Value.ToString() == "Nam") radioButton1.Checked = true;
             else radioButton2.Checked = true;
             txtquequan.Text = selectedRow.Cells[4].Value.ToString();
-            txtdienthoai.Text = selectedRow.Cells[5].Value.ToString();
-            cmblop.Text = selectedRow.Cells[6].Value.ToString();
-            cmbtenkhoa.Text = selectedRow.Cells[7].Value.ToString(); ;
-            cmbnganh.Text = selectedRow.Cells[8].Value.ToString(); ;
-            cmbkh.Text = selectedRow.Cells[9].Value.ToString(); ;
-            cmbdt.Text = selectedRow.Cells[10].Value.ToString(); ;
+         //   txtdienthoai.Text = selectedRow.Cells[5].Value.ToString();
+            cmblop.Text = selectedRow.Cells[5].Value.ToString();
+            cmbtenkhoa.Text = selectedRow.Cells[6].Value.ToString(); ;
+            cmbnganh.Text = selectedRow.Cells[7].Value.ToString(); ;
+            cmbkh.Text = selectedRow.Cells[8].Value.ToString(); ;
+            cmbdt.Text = selectedRow.Cells[9].Value.ToString(); ;
         }
-
+        public string d;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             if (dateTimePicker1.Value.Year >= 2006)
@@ -169,7 +169,7 @@ namespace Test
                 MessageBox.Show("Số tuổi không hợp lệ để học đại học", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            if (txtdienthoai.Text == "" || txthoten.Text == "" || txtmaso.Text == "" || txtquequan.Text == "")
+            if (/*txtdienthoai.Text == "" || */txthoten.Text == "" || txtmaso.Text == "" || txtquequan.Text == "")
             {
                 MessageBox.Show("Nhập đủ thông tin trước khi thêm", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -247,39 +247,51 @@ namespace Test
         {
 
         }
-
+   
         private void simpleButton3_Click(object sender, EventArgs e)
         {
+            
+                if (txtmaso.Text == "")
+                {
+                    MessageBox.Show("Chưa nhập mã số để tiến hành thao tác", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if(!d.Equals(txtmaso.Text))
+                {
+                    
+                    MessageBox.Show("Không được đổi mã  số sinh viên", "Thông báo", MessageBoxButtons.OK);
+                    txtmaso.Text = d;
+                    return;
 
-            if (txtmaso.Text == "")
-            {
-                MessageBox.Show("Chưa nhập mã số để tiến hành thao tác", "Thông báo", MessageBoxButtons.OK);
+                }
+                SinhVien a = db.SinhViens.FirstOrDefault(p => p.MaSV == txtmaso.Text);
+                if (a == null)
+                {
+                    MessageBox.Show("Không tìm thấy sinh viên!", "Thông báo", MessageBoxButtons.OK);
                 return;
-            }
-            SinhVien a = db.SinhViens.FirstOrDefault(p => p.MaSV == txtmaso.Text);
-            if (a == null)
-            {
-                MessageBox.Show("Không tìm thấy sinh viên!", "Thông báo", MessageBoxButtons.OK);
-            }
-            if (dateTimePicker1.Value.Year >= 2006)
-            {
-                MessageBox.Show("Nhập Ngày Sinh Không Hợp Lệ!", "Thông Báo", MessageBoxButtons.OK);
-            }
-            else
-            {
-                a.MaSV = txtmaso.Text;
-                if (txthoten.Text != "") a.TenSV = txthoten.Text;
-                //if (txtdienthoai.Text != "") a.SDT = txtdienthoai.Text;
-                a.NgaySinh = dateTimePicker1.Value;
-                a.MaLop = cmblop.SelectedValue.ToString();
-                //MessageBox.Show(cmblop.SelectedValue.ToString(), "Thong bao", MessageBoxButtons.OK);
-                a.GioiTinh = (radioButton1.Checked) ? "Nam" : "Nữ";
-                if (txtquequan.Text != "") a.QueQuan = txtquequan.Text;
-                db.SaveChanges();
-                sv = db.SinhViens.ToList();
-                Blinggridview();
-                MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK);
-            }
+                }
+                if (dateTimePicker1.Value.Year >= 2006)
+                {
+                    MessageBox.Show("Nhập Ngày Sinh Không Hợp Lệ!", "Thông Báo", MessageBoxButtons.OK);
+                }
+
+                else
+                {
+                    
+                    if (txthoten.Text != "") a.TenSV = txthoten.Text;
+                    //if (txtdienthoai.Text != "") a.SDT = txtdienthoai.Text;
+                    a.NgaySinh = dateTimePicker1.Value;
+                    a.MaLop = cmblop.SelectedValue.ToString();
+                    //MessageBox.Show(cmblop.SelectedValue.ToString(), "Thong bao", MessageBoxButtons.OK);
+                    a.GioiTinh = (radioButton1.Checked) ? "Nam" : "Nữ";
+                    if (txtquequan.Text != "") a.QueQuan = txtquequan.Text;
+                    db.SaveChanges();
+                    sv = db.SinhViens.ToList();
+                    Blinggridview();
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK);
+                }
+          
+            
 
         }
 
@@ -323,6 +335,10 @@ namespace Test
             changekhoahocandhedaotaobyclass();
         }
 
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

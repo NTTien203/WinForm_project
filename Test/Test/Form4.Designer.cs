@@ -35,14 +35,12 @@ namespace Test
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txthoten = new System.Windows.Forms.TextBox();
             this.txtquequan = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.txtdienthoai = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -58,31 +56,31 @@ namespace Test
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(523, 27);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, -12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 16);
+            this.label1.Size = new System.Drawing.Size(426, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin sinh viên";
             // 
@@ -91,7 +89,7 @@ namespace Test
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Họ tên";
             // 
@@ -100,7 +98,7 @@ namespace Test
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ngày sinh";
             // 
@@ -109,7 +107,7 @@ namespace Test
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 16);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Giới tính";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -119,34 +117,25 @@ namespace Test
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 217);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 16);
+            this.label5.Size = new System.Drawing.Size(74, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quê Quán";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(394, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Điện thoại";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(394, 84);
+            this.label7.Location = new System.Drawing.Point(398, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 16);
+            this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Tên lớp";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(394, 126);
+            this.label8.Location = new System.Drawing.Point(398, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 16);
+            this.label8.Size = new System.Drawing.Size(68, 17);
             this.label8.TabIndex = 7;
             this.label8.Text = "Tên khoa";
             // 
@@ -169,7 +158,7 @@ namespace Test
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(100, 176);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 20);
+            this.radioButton1.Size = new System.Drawing.Size(58, 21);
             this.radioButton1.TabIndex = 12;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Nam";
@@ -180,41 +169,33 @@ namespace Test
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(185, 176);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 20);
+            this.radioButton2.Size = new System.Drawing.Size(47, 21);
             this.radioButton2.TabIndex = 13;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // txtdienthoai
-            // 
-            this.txtdienthoai.Location = new System.Drawing.Point(481, 37);
-            this.txtdienthoai.Name = "txtdienthoai";
-            this.txtdienthoai.Size = new System.Drawing.Size(231, 22);
-            this.txtdienthoai.TabIndex = 14;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(781, 43);
+            this.label9.Location = new System.Drawing.Point(398, 126);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 16);
+            this.label9.Size = new System.Drawing.Size(77, 17);
             this.label9.TabIndex = 20;
             this.label9.Text = "Tên ngành";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(781, 81);
+            this.label11.Location = new System.Drawing.Point(398, 169);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 16);
+            this.label11.Size = new System.Drawing.Size(68, 17);
             this.label11.TabIndex = 22;
             this.label11.Text = "Khóa học";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txttim);
-            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtmaso);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.cmblop);
@@ -226,28 +207,27 @@ namespace Test
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtdienthoai);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.txtquequan);
             this.groupBox1.Controls.Add(this.txthoten);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(39, 46);
+            this.groupBox1.Location = new System.Drawing.Point(282, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1158, 249);
+            this.groupBox1.Size = new System.Drawing.Size(798, 260);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
             // 
             // txttim
             // 
-            this.txttim.Location = new System.Drawing.Point(440, 184);
+            this.txttim.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txttim.Location = new System.Drawing.Point(804, 301);
             this.txttim.Multiline = true;
             this.txttim.Name = "txttim";
             this.txttim.Size = new System.Drawing.Size(712, 34);
@@ -256,12 +236,14 @@ namespace Test
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(355, 187);
+            this.label13.Location = new System.Drawing.Point(724, 309);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 16);
+            this.label13.Size = new System.Drawing.Size(74, 17);
             this.label13.TabIndex = 32;
             this.label13.Text = "Tìm Kiếm :";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // txtmaso
             // 
@@ -275,7 +257,7 @@ namespace Test
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 34);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 16);
+            this.label12.Size = new System.Drawing.Size(46, 17);
             this.label12.TabIndex = 30;
             this.label12.Text = "MSSV";
             // 
@@ -283,7 +265,7 @@ namespace Test
             // 
             this.cmblop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmblop.FormattingEnabled = true;
-            this.cmblop.Location = new System.Drawing.Point(481, 81);
+            this.cmblop.Location = new System.Drawing.Point(489, 34);
             this.cmblop.Name = "cmblop";
             this.cmblop.Size = new System.Drawing.Size(231, 24);
             this.cmblop.TabIndex = 29;
@@ -293,7 +275,7 @@ namespace Test
             // 
             this.cmbtenkhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtenkhoa.FormattingEnabled = true;
-            this.cmbtenkhoa.Location = new System.Drawing.Point(481, 126);
+            this.cmbtenkhoa.Location = new System.Drawing.Point(489, 76);
             this.cmbtenkhoa.Name = "cmbtenkhoa";
             this.cmbtenkhoa.Size = new System.Drawing.Size(231, 24);
             this.cmbtenkhoa.TabIndex = 28;
@@ -303,7 +285,7 @@ namespace Test
             // 
             this.cmbnganh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbnganh.FormattingEnabled = true;
-            this.cmbnganh.Location = new System.Drawing.Point(888, 35);
+            this.cmbnganh.Location = new System.Drawing.Point(489, 126);
             this.cmbnganh.Name = "cmbnganh";
             this.cmbnganh.Size = new System.Drawing.Size(231, 24);
             this.cmbnganh.TabIndex = 27;
@@ -312,7 +294,7 @@ namespace Test
             // 
             this.cmbkh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbkh.FormattingEnabled = true;
-            this.cmbkh.Location = new System.Drawing.Point(888, 84);
+            this.cmbkh.Location = new System.Drawing.Point(489, 169);
             this.cmbkh.Name = "cmbkh";
             this.cmbkh.Size = new System.Drawing.Size(231, 24);
             this.cmbkh.TabIndex = 26;
@@ -321,7 +303,7 @@ namespace Test
             // 
             this.cmbdt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbdt.FormattingEnabled = true;
-            this.cmbdt.Location = new System.Drawing.Point(888, 126);
+            this.cmbdt.Location = new System.Drawing.Point(489, 210);
             this.cmbdt.Name = "cmbdt";
             this.cmbdt.Size = new System.Drawing.Size(231, 24);
             this.cmbdt.TabIndex = 25;
@@ -329,9 +311,9 @@ namespace Test
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(781, 129);
+            this.label10.Location = new System.Drawing.Point(398, 214);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 16);
+            this.label10.Size = new System.Drawing.Size(85, 17);
             this.label10.TabIndex = 24;
             this.label10.Text = "Hệ Đào Tạo";
             // 
@@ -347,6 +329,7 @@ namespace Test
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column11,
@@ -354,7 +337,6 @@ namespace Test
             this.Column2,
             this.Column3,
             this.Column9,
-            this.Column4,
             this.Column5,
             this.Column6,
             this.Column7,
@@ -368,6 +350,39 @@ namespace Test
             this.dataGridView1.Size = new System.Drawing.Size(1515, 209);
             this.dataGridView1.TabIndex = 23;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(311, 302);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(94, 29);
+            this.simpleButton1.TabIndex = 24;
+            this.simpleButton1.Text = "Thêm";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(434, 302);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
+            this.simpleButton2.TabIndex = 25;
+            this.simpleButton2.Text = "Xóa";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(552, 301);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(94, 29);
+            this.simpleButton3.TabIndex = 26;
+            this.simpleButton3.Text = "Sửa";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // Column11
             // 
@@ -404,13 +419,6 @@ namespace Test
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Điện Thoại";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -446,51 +454,14 @@ namespace Test
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(252, 301);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton1.TabIndex = 24;
-            this.simpleButton1.Text = "Thêm";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(413, 301);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton2.TabIndex = 25;
-            this.simpleButton2.Text = "Xóa";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(574, 301);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton3.TabIndex = 26;
-            this.simpleButton3.Text = "Sửa";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(736, 301);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton4.TabIndex = 27;
-            this.simpleButton4.Text = "Thoát";
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1528, 558);
-            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txttim);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -515,14 +486,12 @@ namespace Test
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txthoten;
         private System.Windows.Forms.TextBox txtquequan;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox txtdienthoai;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -530,7 +499,6 @@ namespace Test
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmblop;
@@ -540,18 +508,17 @@ namespace Test
         private System.Windows.Forms.ComboBox cmbdt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtmaso;
+        private System.Windows.Forms.TextBox txttim;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.TextBox txttim;
-        private System.Windows.Forms.Label label13;
     }
 }
