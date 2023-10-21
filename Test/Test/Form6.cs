@@ -183,13 +183,26 @@ namespace Test
                         string tencu = db.TenMH;
                         if (KTTenMon(tenmoi, tencu) == true)
                         {
-                            MessageBox.Show("Trùng tên Môn", "Thông báo", MessageBoxButtons.OK);
+                            MessageBox.Show("Trùng tên Môn ", "Thông báo", MessageBoxButtons.OK);
                         }
                         else
                         {
-                            if (checkTrung(tenmoi))
+                            if (checkTrung(tenmoi)  )
                             {
-                                MessageBox.Show("Trùng tên Môn", "Thông báo", MessageBoxButtons.OK);
+                                if (db.MaMH == textBox1.Text)
+                                {
+                                    db.SoTC = int.Parse(textBox3.Text);
+                                    context.SaveChanges();
+                                    dataGridView1.Rows.Clear();
+                                    listMonHoc = context.MonHocs.ToList();
+                                    BindGrid(listMonHoc);
+                                    //MessageBox.Show("Sua Thong Tin thanh cong");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Trùng tên Môn 2", "Thông báo", MessageBoxButtons.OK);
+                                }
+                               
                             }
                             else
                             {
