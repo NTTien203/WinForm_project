@@ -196,11 +196,11 @@ namespace Test
                                     dataGridView1.Rows.Clear();
                                     listMonHoc = context.MonHocs.ToList();
                                     BindGrid(listMonHoc);
-                                    //MessageBox.Show("Sua Thong Tin thanh cong");
+                                    MessageBox.Show("Sua So TC thanh cong");
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Trùng tên Môn 2", "Thông báo", MessageBoxButtons.OK);
+                                    MessageBox.Show("Trùng tên Môn ", "Thông báo", MessageBoxButtons.OK);
                                 }
                                
                             }

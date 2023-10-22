@@ -211,20 +211,31 @@ namespace Test
                 {
                     Khoa updateK = context.Khoas.FirstOrDefault(s => s.MaKhoa == txtMaKhoa.Text);
                     string tenmoi = txtTenKhoa.Text;
-                    
-
                     if (updateK != null)
                     {
                         string tencu = updateK.TenKhoa;
                         if (KTTenKhoa(tenmoi, tencu) == true)
                         {
-                            MessageBox.Show("Trùng tên khoa","Thông báo",MessageBoxButtons.OK);
+                            MessageBox.Show("Trung ten mon","Thông báo",MessageBoxButtons.OK);
                         }
                         else
                         {
                             if (checkTrung(tenmoi))
                             {
-                                MessageBox.Show("Trùng tên khoa", "Thông báo", MessageBoxButtons.OK);
+                                if (updateK.MaKhoa == txtMaKhoa.Text)
+                                {
+                                    updateK.DiaChi = txtDiaChi.Text;
+                                    updateK.DienThoai = txtDT.Text;
+                                    context.SaveChanges();
+                                    dgvDanhSach.Rows.Clear();
+                                    listk = context.Khoas.ToList();
+                                    BindDaTaGrid(listk);
+                                    MessageBox.Show("Sua dia chi va dien thoai thanh cong");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Trùng tên khoa ", "Thông báo", MessageBoxButtons.OK);
+                                }
                             }
                             else
                             {
@@ -236,15 +247,12 @@ namespace Test
                                 BindDaTaGrid(listK);
                                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
                             }
-                            
-
                         }
                     }
                     if (updateK == null)
                     {
                         MessageBox.Show("Khoa không tồn tại","Thông báo",MessageBoxButtons.OK);
                     }
-                    
                 }
 
             }

@@ -221,7 +221,20 @@ namespace Test
                         {
                             if (checkTrung(tenmoi))
                             {
-                                MessageBox.Show("Trùng tên lớp", "Thông báo", MessageBoxButtons.OK);
+                                if (updateL.MaLop == txtMalop.Text)
+                                {
+                                    updateL.MaHeDT = cbxHeDaoTao.SelectedValue.ToString();
+                                    updateL.MaKhoaHoc = cbxMaKhoaHoc.SelectedValue.ToString();
+                                    context.SaveChanges();
+                                    dgvDanhSach.Rows.Clear();
+                                    listk = context.Khoas.ToList();
+                                    BindDataGrid(listL);
+                                    MessageBox.Show("Sua dia chi va dien thoai thanh cong");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Trùng tên khoa ", "Thông báo", MessageBoxButtons.OK);
+                                }
                             }
                             else
                             {
