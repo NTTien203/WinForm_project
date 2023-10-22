@@ -223,13 +223,14 @@ namespace Test
                             {
                                 if (updateL.MaLop == txtMalop.Text)
                                 {
+                                    updateL.MaKhoa = cbxMaKhoa.SelectedValue.ToString();
                                     updateL.MaHeDT = cbxHeDaoTao.SelectedValue.ToString();
                                     updateL.MaKhoaHoc = cbxMaKhoaHoc.SelectedValue.ToString();
                                     context.SaveChanges();
                                     dgvDanhSach.Rows.Clear();
                                     listk = context.Khoas.ToList();
                                     BindDataGrid(listL);
-                                    MessageBox.Show("Sua dia chi va dien thoai thanh cong");
+                                    MessageBox.Show("Sua ten khoa, khóa học,hệ đào tạo");
                                 }
                                 else
                                 {
