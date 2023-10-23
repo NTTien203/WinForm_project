@@ -119,7 +119,16 @@ REFERENCES [dbo].[SinhVien] ([MaSV])
 GO
 
 ALTER TABLE [dbo].[Diem] CHECK CONSTRAINT [FK_Diem_SinhVien]
-
+-- dang nhap
+CREATE TABLE [dbo].[DangNhap](
+	[TaiKhoang] [nchar](10) NOT NULL,
+	[MatKhau] [nchar](10) NOT NULL,
+ CONSTRAINT [PK_DangNhap] PRIMARY KEY CLUSTERED 
+(
+	[TaiKhoang] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
 -- chen du lieu
 -- Chèn dữ liệu vào bảng HeDT
 INSERT INTO HeDT (MaHeDT, TenHeDT) VALUES
@@ -136,8 +145,8 @@ INSERT INTO Khoa (MaKhoa, TenKhoa, DiaChi, DienThoai) VALUES
 ('K003', N'Ngôn ngữ Anh', N'Địa chỉ 3', NULL);
 -- Chèn dữ liệu vào bảng Lop
 INSERT INTO Lop (MaLop, TenLop, MaKhoa, MaHeDT, MaKhoaHoc) VALUES
-('L001', 'Lớp 01', 'K001', 'HDT001', 'KH001'),
-('L002', 'Lớp 02', 'K002', 'HDT002', 'KH002');
+('L001', N'Lớp 01', 'K001', 'HDT001', 'KH001'),
+('L002', N'Lớp 02', 'K002', 'HDT002', 'KH002');
 -- Chèn dữ liệu vào bảng MonHoc
 INSERT INTO MonHoc (MaMH, TenMH, SoTC) VALUES
 ('MH001', N'Toán rời rạc', 4),
@@ -146,12 +155,16 @@ INSERT INTO MonHoc (MaMH, TenMH, SoTC) VALUES
 ('MH004', N'Lịch sử Đảng', 4);
 -- Chèn dữ liệu vào bảng SinhVien
 INSERT INTO SinhVien (MaSV, TenSV, GioiTinh, NgaySinh, QueQuan, MaLop) VALUES
-('SV001', N'Nguyễn Văn A', 'Nam', '2000-01-01', N'Hà Nội', 'L001'),
+('SV001', N'Nguyễn Văn A', N'Nam', '2000-01-01', N'Hà Nội', 'L001'),
 ('SV002', N'Trần Thị B', N'Nữ', '2001-02-02', N'Hồ Chí Minh', 'L002'),
-('SV003', N'Lê Văn C', 'Nam', '2002-03-03', N'Đà Nẵng', 'L001');
+('SV003', N'Lê Văn C', N'Nam', '2002-03-03', N'Đà Nẵng', 'L001');
 -- Chèn dữ liệu vào bảng Diem
 INSERT INTO Diem (MaSV, MaMH, DiemL1, DiemL2) VALUES
 ('SV001', 'MH001', 8.5, 7.0),
 ('SV001', 'MH002', 9.0, 8.5),
 ('SV002', 'MH001', 7.0, 6.5),
 ('SV002', 'MH002', 8.0, 7.5);
+INSERT INTO [dbo].[DangNhap] ([TaiKhoang], [MatKhau])
+VALUES ('user1', 'password1'),
+       ('user2', 'password2'),
+       ('user3', 'password3');
