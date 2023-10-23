@@ -179,7 +179,7 @@ namespace Test
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Không thể xóa lớp khi còn sinh viên học trong lớp, vui lòng xóa sinh viên trước","Thông báo");
             }
         }
         private bool KTTenKhoa(string tenmoi, string tencu)
