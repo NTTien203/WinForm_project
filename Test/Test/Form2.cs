@@ -41,6 +41,7 @@ namespace Test
             barButtonItem8.Enabled = true;
             barButtonItem9.Enabled = true;
             barButtonItem10.Enabled = true;
+            barButtonItem13.Enabled = true;
             barButtonItem11.Enabled = true;
             barButtonItem12.Enabled = true;
         }
@@ -66,6 +67,7 @@ namespace Test
             barButtonItem9.Enabled = true;
             barButtonItem10.Enabled = true;
             barButtonItem11.Enabled = true;
+            barButtonItem13.Enabled = true;
             barButtonItem12.Enabled = true;
             DisposeAllButThis(new_mdi_child);
         }
@@ -84,6 +86,7 @@ namespace Test
             barButtonItem9.Enabled = true;
             barButtonItem10.Enabled = true;
             barButtonItem11.Enabled = true;
+            barButtonItem13.Enabled = true;
             barButtonItem12.Enabled = false;
             DisposeAllButThis(new_mdi_child);
         }
@@ -100,6 +103,7 @@ namespace Test
             barButtonItem9.Enabled = false;
             barButtonItem10.Enabled = true;
             barButtonItem11.Enabled = true;
+            barButtonItem13.Enabled = true;
             barButtonItem12.Enabled = true;
             DisposeAllButThis(new_mdi_child);
         }
@@ -116,6 +120,7 @@ namespace Test
             barButtonItem9.Enabled = true;
             barButtonItem10.Enabled = true;
             barButtonItem11.Enabled = true;
+            barButtonItem13.Enabled = true;
             barButtonItem12.Enabled = true;
             DisposeAllButThis(new_mdi_child);
         }
@@ -132,6 +137,7 @@ namespace Test
             barButtonItem9.Enabled = true;
             barButtonItem10.Enabled = true;
             barButtonItem11.Enabled = true;
+            barButtonItem13.Enabled = true;
             barButtonItem12.Enabled = true;
             DisposeAllButThis(new_mdi_child);
         }
@@ -148,6 +154,7 @@ namespace Test
             barButtonItem9.Enabled = true;
             barButtonItem10.Enabled = false;
             barButtonItem11.Enabled = true;
+            barButtonItem13.Enabled = true;
             barButtonItem12.Enabled = true;
             DisposeAllButThis(new_mdi_child);
         }
@@ -165,6 +172,23 @@ namespace Test
             Form3 fr = new Form3();
             this.Hide();
             fr.ShowDialog();
+        }
+
+        private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formtopo new_mdi_child = new Formtopo();
+            new_mdi_child.Text = "Cửa sổ con MDI";
+            new_mdi_child.MdiParent = this;
+            new_mdi_child.Show();
+            barButtonItem2.Enabled = true;
+            barButtonItem5.Enabled = true;
+            barButtonItem8.Enabled = true;
+            barButtonItem9.Enabled = true;
+            barButtonItem10.Enabled = true;
+            barButtonItem11.Enabled = true;
+            barButtonItem12.Enabled = true;
+            barButtonItem13.Enabled = false;
+            DisposeAllButThis(new_mdi_child);
         }
     }
 }

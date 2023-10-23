@@ -117,6 +117,29 @@ namespace Test
             comboBox2.Text = selectedRow.Cells[1].Value.ToString();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridView1.CurrentRow;
+            selectedRow.Cells[0].Value = comboBox1.Text;
+            selectedRow.Cells[1].Value = comboBox2.Text;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridView1.CurrentRow;
+            dataGridView1.Rows.Remove(selectedRow);
+        }
+
+        private void Formtopo_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
         private void btnkq_Click(object sender, EventArgs e)
         {
             int count = dataGridView1.Rows.Count;
